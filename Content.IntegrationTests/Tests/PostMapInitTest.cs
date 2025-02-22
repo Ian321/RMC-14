@@ -23,6 +23,7 @@ using YamlDotNet.RepresentationModel;
 namespace Content.IntegrationTests.Tests
 {
     [TestFixture]
+    [NonParallelizable]
     public sealed class PostMapInitTest
     {
         private const bool SkipTestMaps = true;
@@ -333,7 +334,7 @@ namespace Content.IntegrationTests.Tests
         [Test]
         public async Task NonGameMapsLoadableTest()
         {
-            await using var pair = await PoolManager.GetServerClient();
+            await using var pair = await PoolManager.GetServerClient(new PoolSettings() { Dirty = true });
             var server = pair.Server;
 
             var mapLoader = server.ResolveDependency<IEntitySystemManager>().GetEntitySystem<MapLoaderSystem>();
