@@ -23,7 +23,6 @@ using YamlDotNet.RepresentationModel;
 namespace Content.IntegrationTests.Tests
 {
     [TestFixture]
-    [NonParallelizable]
     public sealed class PostMapInitTest
     {
         private const bool SkipTestMaps = true;
