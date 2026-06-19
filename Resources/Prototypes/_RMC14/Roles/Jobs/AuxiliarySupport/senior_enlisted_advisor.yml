@@ -131,3 +131,18 @@
 - type: playTimeTracker
   id: CMJobSeniorEnlistedAdvisor
   isHumanoid: true
+
+# Imaginary friend
+
+- type: job
+  parent: CMSeniorEnlistedAdvisor
+  id: RMCSeniorEnlistedAdvisorImaginaryFriend
+  startingGear: RMCGearSeniorEnlistedAdvisorImaginaryFriend
+  spawnMenuRoleName: "[INTERNAL] SEA Imaginary Friend"
+  hidden: true
+
+- type: startingGear
+  parent: CMGearSeniorEnlistedAdvisor
+  id: RMCGearSeniorEnlistedAdvisorImaginaryFriend
+  equipment:
+    ears: RMCHeadsetSEAReadOnly

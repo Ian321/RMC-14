@@ -527,6 +527,17 @@
     - Rifleman
 
 - type: entity
+  parent: RMCHeadsetSEA
+  id: RMCHeadsetSEAReadOnly
+  suffix: read only
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - RMCEncryptionKeyCommonReadOnly
+      - RMCEncryptionKeySeniorCommandReadOnly
+
+- type: entity
   parent: CMHeadsetSeniorCommand
   id: RMCHeadsetSynth
   name: marine synth headset

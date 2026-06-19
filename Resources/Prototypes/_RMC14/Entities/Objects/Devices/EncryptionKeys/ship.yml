@@ -35,6 +35,15 @@
   - type: Sprite
     state: stripped_key
 
+- type: entity
+  parent: CMEncryptionKeyCommon
+  id: RMCEncryptionKeyCommonReadOnly
+  suffix: read only
+  components:
+  - type: EncryptionKey
+    readOnlyChannels:
+    - MarineCommon
+
 # Colony
 - type: entity
   parent: CMEncryptionKey
@@ -171,6 +180,27 @@
     defaultChannel: MarineCommand
   - type: Sprite
     state: cmp_key
+
+- type: entity
+  parent: RMCEncryptionKeySeniorCommand
+  id: RMCEncryptionKeySeniorCommandReadOnly
+  suffix: read only
+  components:
+  - type: EncryptionKey
+    readOnlyChannels:
+    - MarineCommand
+    - MarineMilitaryPolice
+    - MarineAlpha
+    - MarineBravo
+    - MarineCharlie
+    - MarineDelta
+    - MarineEcho
+    - MarineFoxtrot
+    - MarineEngineer
+    - MarineMedical
+    - MarineRequisition
+    - MarineJTAC
+    - MarineIntel
 
 # Marine Command
 - type: entity
